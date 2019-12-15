@@ -1,0 +1,390 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1,
+  h2,
+  h3,
+
+  h5,
+  h6 {
+    margin: 8px 0; 
+    /*interlineado*/
+  }
+
+  /*espcio de twitter en el toolbar*/
+   .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    height: 50px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    background-color: #004d40;
+    /*marron  800000
+    verde #00695c
+    #004d40
+    
+    */
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+
+  .content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+
+
+
+  /* para q el coontenido con enlace tenga de color azul*/
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+</style>
+
+<!--PRINCIPAL -->
+<a name="inicio"></a>
+<body>
+  <section class = "parrallax" id = "seccion1">
+    <div class="conten">
+      <h1>AROMA DE CAFÉ</h1>
+      <h4>Las buenas historias de amor siempre empiezan con un café</h4>
+    </div>
+  </section> 
+</body>
+
+<div class="social">
+  <ul>
+    <li><a href="#inicio" class="A1">Inicio</a> </li>
+    <li><a href="#historia" class="A2">Historia</a></li>
+    <li><a href="#tipos" class="A3">Tipos</a></li>
+    <li><a href="#consumo" class="A4">Consumo</a></li>
+  </ul>
+</div>
+
+<!-- Contenido -->
+<div class="content" role="main">
+  
+  <div class="content2">
+    <br>
+    <h1>Bienvenido al café gourmet</h1>
+    Desde hace más de dos siglos y hasta nuestros días, el café se ha mantenido como una de
+    las bebidas de mayor consumo en el mundo. El grano del cafeto es considerado como un
+    producto básico que tiene una gran importancia para la economía de numerosos países
+    productores que, en algunos casos, dependen en gran medida de su exportación para
+    obtener divisas.
+  </div>
+
+  <div class="content3">
+    <div><p>El CAFÉ es la segunda bebida mas consumida en el mundo, después del agua.</p></div>
+    <div><p>Valorizado como el segundo producto mas comercializado después del petroleo.</p></div>
+  </div>
+ 
+</div>
+
+<a name="historia"></a>
+<div class="content5" >
+  <div class="content4">
+    <div><h1>HISTORIA</h1>
+      Esta ancestral infusión ha formado parte del ser humano durante siglos. 
+      El origen de la historia del café se localiza en Etiopía, África. 
+      Es tan antigua, que no existen documentos escritos sobre cuándo se comenzó a tomar. 
+      Eso se debe a que en aquella época, la escritura no había llegado a esas regiones.
+      <br><br>
+      En el año 1100, se cultivaba café en la península Arábica, se lo tostaba, hervía y se 
+      elaboraba una bebida. Los árabes hicieron todos los esfuerzos necesarios para prevenir 
+      que otros países adquieran los preciados granos. Sin embargo, para mediados del siglo XV.
+      Algunas semillas de café fueron sacadas de Arabia y su cultivo se extendió hasta el Cairo 
+      y todo el imperio Turco.
+      <br><br>
+      El cultivo de café en América se inicia en 1723 en la Martinica, después los portugueses 
+      lo llevan a Brasil. Paralelamente, a mediados del siglo XVII se lo introdujo en Guatemala 
+      y después sucesivamente en Puerto Rico, Costa Rica, Venezuela, Colombia y Ecuador.
+    </div>
+
+    <div>
+      <div id="histo">
+
+      </div>
+    </div>
+    
+  </div> 
+  
+  
+    
+</div>
+
+<a name="tipos"></a>
+<div class="content5">
+  <h1>Tres tipos básicos en función del origen de la planta</h1>
+  Si bien existe una amplia cantidad de países en que se cultivan los cafetos, lo cierto es a nivel general nos podemos encontrar con tres grandes tipos de café en función de la variedad de la planta que se cultiva, siendo principalmente dos especies las utilizadas y la tercera de las opciones la combinación de los granos de ambos tipos.
+
+  <div class="content3" >
+    <div>
+      <h2>Café arábica</h2>
+      El tipo de café que más se utiliza y a su vez que más apreciado resulta es el que se corresponde con las primeras variantes utilizadas para elaborar la bebida: el café arábica.
+      <br> Esta especie procedente de Etiopía y con varias subespecies tiende a ser delicada y a proporcionar un grano con un sabor muy aromático y una cantidad considerable pero menor a la otra variedad existente en cuanto a nivel de cafeína. Pese a su origen africano en la actualidad suele ser más cultivado en los países de Sudamérica, Asia y Centroamérica.
+    </div>
+      
+    <div> 
+      <h2>Café robusta</h2>
+      Si bien tiende a ser menos utilizado a nivel general, esta variedad posee la importante característica de tener un nivel mucho más elevado de cafeína que el anterior, algo que provoca que el sabor que produce a la hora de beberse sea mucho más intenso. y con tono bastante más amargo.
+    </div>
+  
+    <div>
+      <h2>Combinaciones</h2>
+      Una gran parte de los cafés que nos tomamos no proceden únicamente de una de las dos especies anteriores y sus variedades, sino que por lo general nos encontramos ante una mezcla en diferentes proporciones de ambas. La proporción exacta puede depender entre otras cosas del tipo de elaboración que se pretende realizar.
+    </div>
+  </div>
+</div>
+
+<a name="consumo"></a>
+<div class="content5">
+  <h1>Café en función de su preparación</h1>
+  Además del tipo de cafeto del que se obtiene, resulta de gran utilidad tener en cuenta que existe una amplia variedad de tipos de café en base al tipo de preparación que llevamos a cabo con los granos o si lo acompañamos con elementos como la leche, el cacao o incluso bebidas alcohólicas. Algunos de los más conocidos son los siguientes.
+  <div class="content7">
+    <div id="imagen1">
+      <div id="info">
+        <br><h1 id="headline">Expresso</h1>
+      </div>
+    </div>
+
+    <div id="imagen2">
+      <div id="info">
+        <br><h1 id="headline">Capuccino</h1>
+      </div>
+    </div>
+
+    <div id="imagen3">
+      <div id="info">
+        <br><h1 id="headline">Macchiato</h1>
+      </div>
+    </div>
+
+    <div id="imagen4">
+      <div id="info">
+        <br><h1 id="headline">Breve</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="content7">
+    <div id="imagen5">
+      <div id="info">
+        <br><h1 id="headline">Americano</h1>
+      </div>
+    </div>
+
+    <div id="imagen6">
+      <div id="info">
+        <br><h1 id="headline">Mocha</h1>
+      </div>
+    </div>
+
+    <div id="imagen7">
+      <div id="info">
+        <br><h1 id="headline">Flat White</h1>
+      </div>
+    </div>
+
+    <div id="imagen8">
+      <div id="info">
+        <br><h1 id="headline">Caramel</h1>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="content" role="main">
+
+  <!-- Footer -->
+  <footer>
+      Un cafecito?
+    
+  </footer>
+
+  <!--imagen de pie de pagina-->
+  <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
+    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+  </svg>
+  
+</div>
+
+<router-outlet></router-outlet>
